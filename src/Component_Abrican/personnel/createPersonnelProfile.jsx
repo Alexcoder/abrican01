@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
-import Utils from './utilsCreatePersonnelProfile';
+// import Utils from './utilsCreatePersonnelProfile';
 import MultipleInputField from '../../Reusable/component/multipleInputField';
 
 const CreatePersonnelProfile = () => {
-  const { 
-         utilsCreatePersonnelProfile,
-         handlePesonnelInputChange,
-    } = Utils()
+  // const { 
+        //  utilsCreatePersonnelProfile,
+        //  handlePesonnelInputChange,
+    // } = Utils()
   
   const initialState={
     observerName        : "",
@@ -21,9 +21,9 @@ const CreatePersonnelProfile = () => {
 
   // 'https://github.com/Alexcoder/abrican01.git
   const[stopCard , setStopCard] = useState(initialState);
-  const[submit , setSubmit] = useState(initialState);
+  const[submit , setSubmit] = useState(true);
   function handleSubmit(){
-    
+    setSubmit(!submit)
   };
 
   const data = [
