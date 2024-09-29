@@ -1,0 +1,47 @@
+
+.stopCardContainer{
+    display: grid;
+    /* place-items: center; */
+    gap:5px;
+    justify-items: center; 
+    background-color: darkgray;
+    height: 100vh;
+    width: auto;
+    padding: 2px;
+}
+.stopCard{
+    height:fit-content;
+    width: auto;
+    padding: 5px;
+    gap: 5px;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.stopCardDisplay{
+    /* border: 0.5px solid black; */
+    box-shadow: 1px 1px 2px 0px;
+    background-color: white;
+    padding: 5px;
+}
+
+/* HEADER */
+.headerContainer{
+    display: grid;
+}
+.itemBody{
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: start;
+}
+.item{
+    border-bottom: 0.2px solid black;
+    border-left: 0.2px solid black;
+    border-right: 0.2px solid black;
+    padding:5px;
+}
+.item1{
+    border-Top: 0.2px solid black;
+}
