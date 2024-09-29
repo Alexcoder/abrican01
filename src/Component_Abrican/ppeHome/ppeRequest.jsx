@@ -3,13 +3,13 @@ import React, {useState} from 'react'
 const PpeHome = () => {
   const[submit , setSubmit] = useState(false)
   
-  const ppeRequestData ={
-    personnelName : "Personnel Name",
-    itemRequested : "Item Requested",
-    itemSize : "Item Size",
-    requestDate: Date(),
-  };
-  const[requestData , setRequestData] = useState(ppeRequestData)
+  // const ppeRequestData ={
+  //   personnelName : "Personnel Name",
+  //   itemRequested : "Item Requested",
+  //   itemSize : "Item Size",
+  //   requestDate: Date(),
+  // };
+  // const[requestData , setRequestData] = useState(ppeRequestData)
 
   const productionCheck ={
     clickStatus: submit? "Submitted" : "Not Submitted",

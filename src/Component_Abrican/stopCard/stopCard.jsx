@@ -1,6 +1,6 @@
 
-import { useState } from "react";
-import { useGlobalState } from "../../State/context/Context";
+// import { useState } from "react";
+// import { useGlobalState } from "../../State/context/Context";
 import Header from "./segment/header";
 import "./stopCard.css"
 

@@ -37,4 +37,4 @@ const equipmentHome = () => {
   )
 }
 
-export default equipmentHome
+export default equipmentHome;

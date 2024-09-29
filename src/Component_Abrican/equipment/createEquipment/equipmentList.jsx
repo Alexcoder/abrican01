@@ -1,16 +1,16 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Utils from "./utilsEquipment";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import TableMap from "../../../Reusable/component/tableMap";
 import "./equipment_create.css";
 
 function EquipmentList(){
     const { equipmentListUtils,  } = Utils();
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    const equipmentDetailsPage=(item)=>{
-        navigate(`/${item.code}`)
-    };
+    // const equipmentDetailsPage=(item)=>{
+    //     navigate(`/${item.code}`)
+    // };
 
     const display=(item,i)=>{       
       return(

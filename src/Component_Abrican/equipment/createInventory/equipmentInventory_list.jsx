@@ -1,16 +1,16 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Utils from "./equipmentInventory_utils";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import TableMap from "../../../Reusable/component/tableMap";
 
 function EquipmentInventoryList(){
     const {
-       cementUnit03And12ftChiksan,
+      //  cementUnit03And12ftChiksan,
        cementUnit03And10ftChiksan,
-       cementUnit06And10ftChiksan,
+      //  cementUnit06And10ftChiksan,
        cementUnit03And2x2PlugValve,
      } = Utils();
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const display=(item,i)=>{   
       return(
