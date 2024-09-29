@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 function Utils(){
     
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const initialStateEquipmentInventory={
         personnelName  : "",
         department     : "",
@@ -164,9 +164,9 @@ function Utils(){
     };
           
 
-const equipmentDetailsPage=(item)=>{
-  navigate(`/${item.code}`)
-};
+// const equipmentDetailsPage=(item)=>{
+//   navigate(`/${item.code}`)
+// };
     
 
       return{
