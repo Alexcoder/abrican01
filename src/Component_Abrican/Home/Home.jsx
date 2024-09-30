@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {homePageData} from "./utils";
+import "./home.css";
 
 function Home (){
 
@@ -31,14 +32,10 @@ function Home (){
   
 
   return (
-    <div style={{padding:"1px 10px", backgroundColor:"darkgray", minHeight:"100vh"}}>
-      <h1>ABR OIL SVS</h1>
-      <div style={{
-        display:"grid",
-        gridTemplateColumns:"repeat(3, 1fr)",
-        gap:"40px",
-        marginTop:"80px",
-      }}>{mappedUtils()}</div>
+    <div className="homeContainer">
+      <h1>ABR OIL SVS</h1>       
+        <div className="mapDisplay">
+        {mappedUtils()}</div>
     </div>
   )
 }
