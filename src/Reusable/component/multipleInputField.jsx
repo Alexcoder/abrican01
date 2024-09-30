@@ -1,35 +1,14 @@
-import React from 'react'
+import React from 'react';
+import "../styles/multipleInputField.css";
 
 const MultipleInputField = ({data, onChange, onClick, buttonLabel, title, disabled, }) => {
 
     return(
         <div 
-        style={{
-            backgroundColor:"rgba(0, 0, 0, 0.6)",
-            position:"fixed",
-            top:"0",
-            left:"0",
-            right:"0",
-            bottom:"0",
-            width:"100%", 
-            display:"grid", 
-            alignItems:"",
-            placeItems:"center",
-            }}>
+        className='multipleInputFieldContainer'>
         <h3 style={{marginBottom:""}}>{title}</h3>
         <main            
-           style={{
-            width:"30%",
-            height:"fitContent",
-            position:"fixed",
-            top:"60px",
-            backgroundColor:"rgba(255, 255, 50, 0.2)",
-            // boxShadow:"0px 0px 5px 3px ",
-            outline:"none",padding:"15px", 
-            border:"1px solid darkgray", 
-            display:"flex", 
-            flexDirection:"column",
-            gap:"20px"}}>
+        className='multipleInputFieldWrapper'>
             {
                data.map((item, i)=>(
                     <input

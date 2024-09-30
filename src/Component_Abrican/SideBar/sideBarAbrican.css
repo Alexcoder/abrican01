@@ -1,0 +1,39 @@
+
+.sideBarContainer{
+    position: fixed;
+    width: 75px; 
+    padding: 105px 8px 10px 8px;
+    color: black; 
+    background-color: lightgray; 
+    min-height: 100vh;
+    border-right: 0.5px solid lightgray; 
+    display: flex;
+    flex-direction: column ;
+    gap: 30px
+}
+@media screen and (max-width: 720px) {
+    .sideBarContainer{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%; 
+        padding: 4px 1px 4px 1px;
+        flex-direction: row ;
+        min-height: 0px;
+        gap: 2px;
+        justify-content: space-between;
+    }   
+}
+.sideBarAbricanButtonWrap{
+       text-align: start;
+       text-wrap: wrap;
+       cursor: pointer; 
+       font-weight: 600;
+       background-color: white; 
+       padding: 5px;
+       border: 1px solid lightgray; 
+       box-shadow: 1px 1px 7px 0px;
+       border-radius: 5px;
+       font-size: 13px;
+}

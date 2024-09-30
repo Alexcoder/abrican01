@@ -1,0 +1,32 @@
+.multipleInputFieldContainer{
+        background-color: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%; 
+        display: grid; 
+        align-items: center;
+        place-items: center;
+        @media (max-width: 720px) {
+            
+        }
+}
+.multipleInputFieldWrapper{
+        width: 30%;
+        height: fitContent;
+        position: fixed;
+        top: 60px;
+        background-color: rgba(255, 255, 50, 0.2);
+        /* boxShadow:"0px 0px 5px 3px "; */
+        outline: none;
+        padding: 15px; 
+        border: 1px solid darkgray; 
+        display: flex; 
+        flex-direction: column;
+        gap: 20px;
+        @media (max-width: 720px){
+            width: 70%;
+        }
+}
