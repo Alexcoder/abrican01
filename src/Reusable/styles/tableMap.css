@@ -1,4 +1,18 @@
 
-.container{
-    background-color: white;
+.tableMapContainer{
+    min-width: 70vw; 
+    /* background-color: ;  */
+    margin-top: 0px;
 }
+.tableWrapper{
+    position: relative;
+    @media screen and (max-width: 720px) {
+        /* max-width: 80%; */
+        /* overflow: auto; */
+    }
+}
+.tableMap{
+    min-width: 70vw; 
+    background-color: lightgray; 
+}
+

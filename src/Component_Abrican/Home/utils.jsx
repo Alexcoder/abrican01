@@ -5,21 +5,21 @@ export const homePageData = [
         page:"/createProfile",
         count: "",
     },
-    {
-        title : "PPE Collected",
-        page:"/ppeCollected",
-        count: "180",
-    },
+    // {
+    //     title : "PPE Collected",
+    //     page:"/ppeCollected",
+    //     count: "180",
+    // },
     {
         title : "Personnel",
         page:"/personnel",
         count: "4900",
     },
-    {
-        title : "Services",
-        page:"/services",
-        count: "6",
-    },
+    // {
+    //     title : "Services",
+    //     page:"/services",
+    //     count: "6",
+    // },
     {
         title : "Equipment",
         page:"/equipmentHome",
@@ -30,11 +30,11 @@ export const homePageData = [
         page:"/jobs",
         count: "34",
     },
-    {
-        title : "Violations",
-        page:"/violations",
-        count: "347",
-    },
+    // {
+    //     title : "Violations",
+    //     page:"/violations",
+    //     count: "347",
+    // },
     {
         title : "Stop Card",
         page:"/stopCard",

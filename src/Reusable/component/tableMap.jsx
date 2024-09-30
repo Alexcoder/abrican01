@@ -25,9 +25,12 @@ const TableMap = (
 
 
   return(
-    <div style={{minWidth:"70vw", backgroundColor:"", marginTop:"0px"}}>
+    <div 
+    className="tableMapContainer">
       <h3>{equipment}</h3>
-    <table border="0.5" cellPadding={"10"} cellSpacing={"2"} style={{minWidth:"70vw", backgroundColor:"lightgray"}}>
+      {/* <div className="tableWrapper"> */}
+    <table border={"0.5"} cellPadding={"10"} cellSpacing={"2"} 
+    className="tableMap">
       <thead>
         <tr style={{backgroundColor:"orange"}}>
           {
@@ -37,12 +40,13 @@ const TableMap = (
           }
         </tr>
       </thead>
-    <tbody style={{maxHeight:"80vh", overflow:"auto"}}>
+    <tbody style={{maxHeight:"80vh", overflow:"auto", backgroundColor:"white"}}>
        { mapItem(0) }
        { mapItem(1) }  
     </tbody>
     </table>
     </div>
+    // </div>
     )
 
 }

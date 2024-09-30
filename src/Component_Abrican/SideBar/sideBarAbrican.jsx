@@ -8,11 +8,12 @@ const SideBarAbrican = () => {
     const sideBarAbricanUtils =[
       { title: "Home", page:"/"},
        { title: "Personnel", page:"/personnel"},
-       { title: "PPE", page:"/personnelPPE"},
+      //  { title: "PPE", page:"/personnelPPE"},
        { title: "Jobs", page:"/jobs"},
-       { title: "Services", page:"/services"},
+      //  { title: "Services", page:"/services"},
        { title: "Equipment", page:"/equipment"},
        { title: "Inventory", page:"/equipmentInventory"},
+       { title: "StopCard", page:"/stopCard"},
     ]
 
   return (
