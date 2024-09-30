@@ -25,11 +25,11 @@ export const homePageData = [
         page:"/equipmentHome",
         count: "22",
     },
-    {
-        title : "Jobs",
-        page:"/jobs",
-        count: "34",
-    },
+    // {
+    //     title : "Jobs",
+    //     page:"/jobs",
+    //     count: "34",
+    // },
     // {
     //     title : "Violations",
     //     page:"/violations",

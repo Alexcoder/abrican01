@@ -9,7 +9,7 @@ const SideBarAbrican = () => {
       { title: "Home", page:"/"},
        { title: "Personnel", page:"/personnel"},
       //  { title: "PPE", page:"/personnelPPE"},
-       { title: "Jobs", page:"/jobs"},
+      //  { title: "Jobs", page:"/jobs"},
       //  { title: "Services", page:"/services"},
        { title: "Equipment", page:"/equipment"},
        { title: "Inventory", page:"/equipmentInventory"},
