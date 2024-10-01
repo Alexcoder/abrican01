@@ -1,16 +1,18 @@
-// import { useState } from "react";
+import { useState } from "react";
 import Utils from "./utilsEquipment";
 // import { useNavigate } from "react-router-dom";
 import TableMap from "../../../Reusable/component/tableMap";
-import "./equipment_create.css";
+import MultipleInputField from "../../../Reusable/component/multipleInputField";
+import "./styles.css";
 
 function EquipmentList(){
-    const { equipmentListUtils,  } = Utils();
+    const { equipmentListUtils, utilsCreateEquipment, setEquipmentData } = Utils();
     // const navigate = useNavigate();
 
     // const equipmentDetailsPage=(item)=>{
     //     navigate(`/${item.code}`)
     // };
+    const [openInput, setOpenInput] = useState(false)
 
     const display=(item,i)=>{       
       return(
@@ -25,6 +27,13 @@ function EquipmentList(){
       </>
     )
   };
+  const handleChange=(e)=>{
+    setEquipmentData((prev)=> ({...prev, [e.target.name] : e.target.value})) ;
+  };
+  const handleSubmit=(e)=>{
+
+  };
+
 
     return(
         <div 
@@ -35,7 +44,19 @@ function EquipmentList(){
              equipment={"EQUIPMENT"} 
              headers={["SN","DEPARTMENT", "EQUIPMENT", "TYPE","SERIAL NO", "CODE", "LOCATION"]} 
              renderItems={(item,i)=> display(item,i)}
+             handleAddNew={()=>setOpenInput(true)}
             />
+           { openInput && 
+             <MultipleInputField
+              data={utilsCreateEquipment} 
+              onChange={handleChange} 
+              onClick={()=> handleSubmit()} 
+              handleClose={()=> setOpenInput(false)}
+              buttonLabel={"Submit"} 
+              title={"CREATE"} 
+              disabled={false}
+              />
+           } 
         </div>
     )
 }

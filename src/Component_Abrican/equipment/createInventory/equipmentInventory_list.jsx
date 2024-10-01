@@ -42,6 +42,7 @@ function EquipmentInventoryList(){
               equipment={"CEMENT UNIT 03"}
               headers={["SN","DEPARTMENT", "EQUIPMENT", "IRON", "TAG", "LOCATION",]}
               renderItems={(item,i)=> display(item,i)}
+              handleAddNew={()=>{}}
             />
 
         </div>

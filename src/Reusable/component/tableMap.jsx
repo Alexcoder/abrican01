@@ -7,6 +7,7 @@ const TableMap = (
     headers, 
     data, 
     renderItems,
+    handleAddNew,
 
   }
    ) =>{
@@ -28,7 +29,8 @@ const TableMap = (
     <div 
     className="tableMapContainer">
       <h3>{equipment}</h3>
-      {/* <div className="tableWrapper"> */}
+      <button onClick={()=> handleAddNew()}>Add</button>
+      <div className="tableWrapper">
     <table border={"0.5"} cellPadding={"10"} cellSpacing={"2"} 
     className="tableMap">
       <thead>
@@ -46,7 +48,7 @@ const TableMap = (
     </tbody>
     </table>
     </div>
-    // </div>
+     </div>
     )
 
 }

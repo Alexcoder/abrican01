@@ -18,7 +18,8 @@
         height: fitContent;
         position: fixed;
         top: 60px;
-        background-color: rgba(255, 255, 50, 0.2);
+        /* background-color: rgba(255, 255, 50, 0.2); */
+        background-color: white;
         /* boxShadow:"0px 0px 5px 3px "; */
         outline: none;
         padding: 15px; 

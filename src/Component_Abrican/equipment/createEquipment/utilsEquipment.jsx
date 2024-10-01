@@ -4,12 +4,12 @@ import { useState } from "react";
 function Utils(){
 
     const initialStateEquipment={
-        personnelName  : "",
+        name  : "",
         department     : "",
-        coverallSize   : "",
-        bootSize       : "",
-        dateJoined     : "",
-        employeeNumber : "",  
+        type   : "",
+        serialNumber       : "",
+        codeName     : "",
+        location : "",  
       };  
     
     const[equipmentData , setEquipmentData] = useState(initialStateEquipment);
@@ -23,22 +23,14 @@ function Utils(){
     
     const utilsCreateEquipment = [
       { placeholder: "Department", name: "department", value: equipmentData.department},
-        { placeholder: "Equipment Name", name: "equipmentName", value: equipmentData.equipmentName},
-        { placeholder: "Coverall Size", name: "coverallSize", value: equipmentData.coverallSize },
-        { placeholder: "Boot Size", name: "bootSize", value: equipmentData.bootSize},
-        { placeholder: "Date Joined", name:"dateJoined", value: equipmentData.dateJoined},
-        { placeholder: "Equipment Number", name:"equipmentNumber", value: equipmentData.employeeNumber},
+        { placeholder: "Equipment Name", name: "name", value: equipmentData.name},
+        { placeholder: "Equipment Type", name: "type", value: equipmentData.type },
+        { placeholder: "Equipment Serial Number", name: "serialNumber", value: equipmentData.serialNumber},
+        { placeholder: "Equipment Code", name:"codeName", value: equipmentData.codeName},
+        { placeholder: "Equipment Location", name:"location", value: equipmentData.location},
     ];
 
     const equipmentListUtils =[
-      // {
-      //   department: "DEPARTMENT",
-      //   equipment: "EQUIPMENT NAME",
-      //   equipmentType: "TYPE",
-      //   equipmentSerialNumber : "SERIAL NUMBER",
-      //   location:"LOCATION",
-      //   equipmentCodeName:"",
-      // },
       {
         department: "Cementing",
         equipment: "Cement Unit",
@@ -90,12 +82,14 @@ function Utils(){
     ]
 
     
-
+console.log(equipmentData)
       return{
         handleEquipmentInputChange,
         utilsCreateEquipment,
         initialStateEquipment,
         equipmentListUtils,
+        equipmentData,
+        setEquipmentData,
       }
 };
 
