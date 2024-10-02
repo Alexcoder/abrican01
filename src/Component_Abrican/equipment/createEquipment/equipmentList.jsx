@@ -37,8 +37,7 @@ function EquipmentList(){
 
     return(
         <div 
-          style={{backgroundColor:"darkgray", display:"grid", justifyItems:"center", width:"", minHeight:"100vh" }}
-          >
+        className="equipmentContainer">
             <TableMap
              data={[equipmentListUtils,[]]}
              equipment={"EQUIPMENT"} 

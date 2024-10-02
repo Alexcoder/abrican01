@@ -16,6 +16,7 @@ const TableMap = (
       return(
       data[number].map((item, i)=>(
         <tr
+        key={i}
                 className="container"
                 style={{cursor:"pointer",textAlign:"start",}}     
          >

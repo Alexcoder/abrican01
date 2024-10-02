@@ -36,7 +36,7 @@ const StopCard = () => {
         <div className="stopCardContainer" style={{backgroundColor:""}}>
             <div className="stopCard">
                 {data.map((item,i)=>(
-                    <div className="stopCardDisplay">
+                    <div key={i} className="stopCardDisplay">
                     <Header item={item} i={i} />
                     </div>
                 ))}

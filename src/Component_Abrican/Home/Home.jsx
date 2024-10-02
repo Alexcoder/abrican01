@@ -9,8 +9,10 @@ function Home (){
 
   const mappedUtils = () =>(
     homePageData.map((item, i)=>(
-      <div style={{display:"", cursor:"pointer", }}
-      onClick={()=> navigate(item.page)}>
+      <div 
+       key={i}
+       style={{display:"", cursor:"pointer", }}
+       onClick={()=> navigate(item.page)}>
       <div style={{
         // display:"grid",
         padding:"5px 8px",
@@ -19,10 +21,10 @@ function Home (){
         borderRadius:"5px",
         backgroundColor:"white",
         color:"blue",
-        minHeight:"80px"
+        // minHeight:"90px"
       }}>
         <h4 key={i} style={{fontSize:"17px"}} > {item.title} </h4>
-        <div>{item.count}</div>
+        <div style={{width: ""}}>{item.count}</div>
       </div>
 
       </div>
@@ -33,7 +35,7 @@ function Home (){
 
   return (
     <div className="homeContainer">
-      <h1>ABR OIL SVS</h1>       
+      <h1 style={{position:"fixed", top:"3px", left:"5px", right:"5px"}}>ABR OIL SVS</h1>       
         <div className="mapDisplay">
         {mappedUtils()}</div>
     </div>

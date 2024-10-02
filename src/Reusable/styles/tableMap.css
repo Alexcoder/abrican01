@@ -1,19 +1,20 @@
 
 .tableMapContainer{
-    /* min-width: 70vw;  */
-    /* background-color: ;  */
-    /* margin-top: 0px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .tableWrapper{
         position: relative;
         width: 100%;
         overflow-x: auto; /* Ensures the table is scrollable if content overflows */
-    @media screen and (max-width: 720px) {
-        width:"60%";
+    @media screen and (max-width: 1024px) {
+       /* width: 100%; */
+       max-width: 95vw;
+       overflow: auto;
     }
 }
 .tableMap{
-    /* min-width: 70vw;  */
     background-color: lightgray; 
 }
 

@@ -2,7 +2,7 @@
 import { Route, Routes , useLocation} from 'react-router-dom';
 
 import Home from "./Component_Abrican/Home/Home.jsx";
-// import SideBarAbrican from './Abrican Personnel PPE/AbricanSideBar/sideBarAbrican.jsx';
+// import Home from './bossom/ohodoProject/home.jsx';
 import SideBarAbrican from "./Component_Abrican/SideBar/sideBarAbrican.jsx"
 import CreatePersonnelProfile from "./Component_Abrican/personnel/createPersonnelProfile.jsx";
 import PPERequest from './Component_Abrican/ppeHome/ppeRequest.jsx';
@@ -10,8 +10,8 @@ import Personnel from './Component_Abrican/personnel/personnelList.jsx';
 import Equipment from './Component_Abrican/equipment/createEquipment/equipmentList.jsx';
 import EquipmentInventory from './Component_Abrican/equipment/createInventory/equipmentInventory_list.jsx';
 import EquipmentHome from './Component_Abrican/equipment/equipmentHome.jsx';
-
 import StopCard from './Component_Abrican/stopCard/stopCard.jsx';
+
 import './App.css';
 
 function App() {

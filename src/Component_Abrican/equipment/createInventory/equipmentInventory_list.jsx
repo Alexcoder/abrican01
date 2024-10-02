@@ -29,13 +29,10 @@ function EquipmentInventoryList(){
     return(
         <div 
           style={{
-            backgroundColor:"darkgray",
+            // backgroundColor:"darkgray",
             display:"grid",
             justifyItems:"center", 
-            height:"100vh" ,
-            paddingTop:"px"
             }}>
-            {/* <div style={{padding:"-40px 0px 0px 0px", fontWeight:"600", fontSize:"30px" }}>EQUIPMENT INVENTORY </div> */}
 
             <TableMap
               data={[cementUnit03And10ftChiksan, cementUnit03And2x2PlugValve, ]}
