@@ -29,9 +29,10 @@ function EquipmentInventoryList(){
     return(
         <div 
           style={{
-            // backgroundColor:"darkgray",
+            backgroundColor:"darkgray",
             display:"grid",
             justifyItems:"center", 
+            minHeight: "100vh",
             }}>
 
             <TableMap

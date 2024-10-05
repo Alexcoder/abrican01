@@ -22,7 +22,15 @@ const equipmentHome = () => {
     ]
 
   return (
-    <div>
+    <div
+    style={{ 
+      minHeight:"100vh",
+      backgroundColor:"darkgray",
+      display:"grid",
+      justifyItems:"center",
+    }}
+
+    >
 
     <div style={{backgroundColor:"darkgray", width:"100%",display:"grid", justifyItems:"center"}}>
         <ReuseHome
