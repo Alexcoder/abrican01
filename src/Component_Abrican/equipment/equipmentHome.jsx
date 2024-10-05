@@ -27,9 +27,7 @@ const equipmentHome = () => {
     <div style={{backgroundColor:"darkgray", width:"100%",display:"grid", justifyItems:"center"}}>
         <ReuseHome
          title={"EQUIPMENT"}
-         data={equipmentPageData}
-         columns={3}
-         
+         data={equipmentPageData}         
          />
       
     </div>

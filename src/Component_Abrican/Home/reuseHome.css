@@ -1,0 +1,28 @@
+.reuseHomeContainer{
+    padding:1px 10px;
+    background-color: darkgray; 
+    min-height: 100vh;
+}
+.reuseHomeMapContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 80px;
+}
+.reuseHomeMapWrapper{
+    padding: 5px 8px;
+    border:1.5px solid lightgray;
+    box-shadow: 1px 1px 5px 0px black;
+    border-radius: 5px;
+    background-color: white;
+    color: blue;
+    min-height: 80px;
+    min-width: 300px;
+}
+@media (max-width: 720px){
+    .reuseHomeMapContainer{
+        grid-template-columns: repeat(1, 1fr); 
+        min-width: 300px;
+        gap: 20px;
+    }
+}

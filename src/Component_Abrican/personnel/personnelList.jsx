@@ -37,7 +37,7 @@ function PersonnelList(){
              equipment={`PERSONNEL ${personnelListUtils.length-1}`}
              headers={["SN","NAME", "DEPARTMENT", "POSITION", "BOOTSIZE","COVERALLSIZE" ]}
             //  Note data must be an array of 2 sub array
-             data={[personnelListUtils, []]}
+             data={[personnelListUtils.slice(0, 10), []]}
              renderItems={(item,i)=> display(item,i)}
             />
 

@@ -11,20 +11,12 @@ function Home (){
     homePageData.map((item, i)=>(
       <div 
        key={i}
-       style={{display:"", cursor:"pointer", }}
+       style={{display:"", cursor:"pointer",  }}
        onClick={()=> navigate(item.page)}>
-      <div style={{
-        // display:"grid",
-        padding:"5px 8px",
-        border:"1.5px solid lightgray",
-        boxShadow:"1px 1px 5px 0px black",
-        borderRadius:"5px",
-        backgroundColor:"white",
-        color:"blue",
-        // minHeight:"90px"
-      }}>
-        <h4 key={i} style={{fontSize:"17px"}} > {item.title} </h4>
-        <div style={{width: ""}}>{item.count}</div>
+      <div 
+      className='homeMapWrapper'>
+        <h4 key={i} style={{fontSize:"17px",}} > {item.title} </h4>
+        <div>{item.count}</div>
       </div>
 
       </div>
