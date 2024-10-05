@@ -23,7 +23,7 @@
         flex-direction: row ;
         min-height: 0px;
         gap: 2px;
-        justify-content: space-between;
+        justify-content: space-around;
     }   
 }
 .sideBarAbricanButtonWrap{
