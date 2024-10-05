@@ -141,13 +141,21 @@ function Utils(){
          && item.ironType.includes(ironDescription)));
 
          return filtered
-    } 
+    } ;
 
     
-    const cementUnit03And12ftChiksan = ironFilterHook(equipmentInventoryListUtils,"cementUnit03", "12ft Chiksan" ) 
-    const cementUnit03And2x2PlugValve = ironFilterHook(equipmentInventoryListUtils,"cementUnit03", "2x2 inch plug valve" ) 
     const cementUnit06And10ftChiksan = ironFilterHook(equipmentInventoryListUtils,"cementUnit06", "10ft Chiksan" ) 
-       
+    
+
+    function cementUnit03Inventory(unitCodeName="cementUnit03"){
+      const cementUnit03And12ftChiksan  = ironFilterHook(equipmentInventoryListUtils, unitCodeName, "12ft Chiksan" ) 
+      const cementUnit03And2x2PlugValve = ironFilterHook(equipmentInventoryListUtils, unitCodeName, "2x2 inch plug valve" ) 
+      return [
+        ...cementUnit03And10ftChiksan(),
+        ...cementUnit03And2x2PlugValve,
+        ...cementUnit03And12ftChiksan,
+      ]
+    };
 
     function cementUnit03And10ftChiksan(){
        const newest =[]
@@ -159,7 +167,6 @@ function Utils(){
           newest.push(item)
         }
       }
-
       return newest
     };
           
@@ -175,9 +182,8 @@ function Utils(){
         initialStateEquipmentInventory,
         equipmentInventoryListUtils,
         cementUnit03And10ftChiksan : cementUnit03And10ftChiksan(),
-        cementUnit03And2x2PlugValve,
         cementUnit06And10ftChiksan,
-        cementUnit03And12ftChiksan,
+        cementUnit03Inventory: cementUnit03Inventory(),
       }
 };
 

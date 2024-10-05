@@ -39,7 +39,7 @@ function EquipmentList(){
         <div 
         className="equipmentContainer">
             <TableMap
-             data={[equipmentListUtils,[]]}
+             data={equipmentListUtils}
              equipment={"EQUIPMENT"} 
              headers={["SN","DEPARTMENT", "EQUIPMENT", "TYPE","SERIAL NO", "CODE", "LOCATION"]} 
              renderItems={(item,i)=> display(item,i)}

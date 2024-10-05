@@ -14,7 +14,8 @@ const TableMap = (
 
     function mapItem(number){
       return(
-      data[number].map((item, i)=>(
+      // data[number].map((item, i)=>(
+      data.map((item, i)=>(
         <tr
         key={i}
                 className="container"
@@ -44,8 +45,8 @@ const TableMap = (
         </tr>
       </thead>
     <tbody style={{maxHeight:"80vh", overflow:"auto", backgroundColor:"white"}}>
-       { mapItem(0) }
-       { mapItem(1) }  
+       { mapItem() }
+       {/* { mapItem(1) }   */}
     </tbody>
     </table>
     </div>

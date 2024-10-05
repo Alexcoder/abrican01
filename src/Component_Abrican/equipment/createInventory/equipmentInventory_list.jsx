@@ -5,10 +5,7 @@ import TableMap from "../../../Reusable/component/tableMap";
 
 function EquipmentInventoryList(){
     const {
-      //  cementUnit03And12ftChiksan,
-       cementUnit03And10ftChiksan,
-      //  cementUnit06And10ftChiksan,
-       cementUnit03And2x2PlugValve,
+       cementUnit03Inventory,
      } = Utils();
     // const navigate = useNavigate();
 
@@ -16,14 +13,25 @@ function EquipmentInventoryList(){
       return(
         <>
            <td>{i+1}</td>
-           <td>{item.department}</td>
-           <td>{item.equipment}</td>        
+           {/* <td>{item.department}</td> */}
+           {/* <td>{item.equipment}</td>         */}
            <td>{item.ironType}</td>
            <td>{item.ironTag}</td>
            <td>{item.location}</td>
      </>
       )
 };
+
+function renderTitle(){
+
+  return(
+    <div>
+      <div style={{textTransform:"capitalize", fontSize:"40px"}}>{cementUnit03Inventory[0].department}</div>
+      <div style={{textTransform:"capitalize", fontWeight:"500", paddingTop:"10px"}}>{cementUnit03Inventory[0].code}</div>
+    </div>
+  )
+}
+
 
 
     return(
@@ -36,9 +44,9 @@ function EquipmentInventoryList(){
             }}>
 
             <TableMap
-              data={[cementUnit03And10ftChiksan, cementUnit03And2x2PlugValve, ]}
-              equipment={"CEMENT UNIT 03"}
-              headers={["SN","DEPARTMENT", "EQUIPMENT", "IRON", "TAG", "LOCATION",]}
+              data={cementUnit03Inventory}
+              equipment={ renderTitle()}
+              headers={["SN", "IRON", "TAG", "LOCATION",]}
               renderItems={(item,i)=> display(item,i)}
               handleAddNew={()=>{}}
             />
