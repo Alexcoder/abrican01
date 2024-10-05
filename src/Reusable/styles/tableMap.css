@@ -2,9 +2,9 @@
 .tableMapContainer{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
 }
 .tableWrapper{
+        box-shadow: 1px 1px 10px 0px black; 
         position: relative;
         width: 100%;
         overflow-x: auto; /* Ensures the table is scrollable if content overflows */
@@ -15,6 +15,6 @@
     }
 }
 .tableMap{
-    background-color: lightgray; 
+    background-color: lightgray;
 }
 
