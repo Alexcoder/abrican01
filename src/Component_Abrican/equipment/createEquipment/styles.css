@@ -2,15 +2,6 @@
         display: grid;
         position: relative;
         justify-content: center;
-        align-items: center;
         background-color: darkgray;
         min-height: 100vh;
-
-        /* display: flex;
-        justify-content: center;
-        background-color: darkgray;
-        background-size:cover;
-        height:max-content;
-        min-height: 100vh; */
-
 }
