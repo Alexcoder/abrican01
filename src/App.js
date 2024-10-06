@@ -1,29 +1,27 @@
 // import { useState } from "react";
 import { Route, Routes , useLocation} from 'react-router-dom';
-
-import Home from "./Component_Abrican/Home/Home.jsx";
-// import Home from './bossom/ohodoProject/home.jsx';
-import SideBarAbrican from "./Component_Abrican/SideBar/sideBarAbrican.jsx"
-import CreatePersonnelProfile from "./Component_Abrican/personnel/createPersonnelProfile.jsx";
-import PPERequest from './Component_Abrican/ppeHome/ppeRequest.jsx';
-import Personnel from './Component_Abrican/personnel/personnelList.jsx';
-import Equipment from './Component_Abrican/equipment/createEquipment/equipmentList.jsx';
-import EquipmentInventory from './Component_Abrican/equipment/createInventory/equipmentInventory_list.jsx';
-import EquipmentHome from './Component_Abrican/equipment/equipmentHome.jsx';
-import StopCard from './Component_Abrican/stopCard/stopCard.jsx';
-
+import * as MyComponents from "./Component_Abrican";
 import './App.css';
 
 function App() {
 
-  // const [access, setAccess] = useState(false);
+  const {
+    Home,
+    SideBar,
+    Personnel,
+    PPERequest,
+    Equipment,
+    EquipmentHome,
+    StopCard,
+    EquipmentInventory,
+    CreatePersonnelProfile,
+  } = MyComponents;
+
   const location = useLocation();
-
-
 
   return (
     <div className="App">
-     { location.pathname !== "/" && <SideBarAbrican/>}
+     { location.pathname !== "/" && <SideBar/>}
         <div style={{marginLeft: location.pathname !=="/" && "",}}>
       <Routes>
           <Route path="/" element={<Home/>} />
