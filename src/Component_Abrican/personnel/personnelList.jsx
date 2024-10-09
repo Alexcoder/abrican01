@@ -7,7 +7,7 @@ function PersonnelList(){
     const [currentPage, setCurrentPage]=useState(1) 
     const { personnelListUtils } = Utils();
     const { pagination } = Hooks();
-    const itemsPerPage = 10;
+    const itemsPerPage = window.innerWidth<720 ? 8 : 10;
     const { firstIndex, lastIndex, serialNumberFactor, totalItems } = pagination(personnelListUtils,itemsPerPage,currentPage)
    
     const display=(item,i)=>{  
