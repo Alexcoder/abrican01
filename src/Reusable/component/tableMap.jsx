@@ -1,4 +1,6 @@
 // import {useState} from "react";
+import Pagination from "./pagination";
+// import Hooks from "../../Hook/hooks";
 import "../styles/tableMap.css";
 
 const TableMap = (
@@ -9,12 +11,19 @@ const TableMap = (
     renderItems,
     handleAddNew,
 
+    itemsPerPage,
+    currentPage,
+    onPageChange,
+    totalItems,
+
   }
    ) =>{
+    // const {pagination} = Hooks();
+    // const { firstIndex, lastIndex, serialNumberFactor,totalItems, numberOfPages} = pagination(equipment,itemsPerPage, currentPage )
+
 
     function mapItem(number){
       return(
-      // data[number].map((item, i)=>(
       data.map((item, i)=>(
         <tr
         key={i}
@@ -46,10 +55,15 @@ const TableMap = (
       </thead>
     <tbody style={{maxHeight:"80vh", overflow:"auto", backgroundColor:"white"}}>
        { mapItem() }
-       {/* { mapItem(1) }   */}
     </tbody>
     </table>
     </div>
+    <Pagination
+    totalItems={totalItems}
+    itemsPerPage={itemsPerPage} 
+    currentPage={currentPage}
+    onPageChange={(page)=>onPageChange(page)}
+    />
      </div>
     )
 

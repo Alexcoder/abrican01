@@ -1,6 +1,7 @@
-// import { useState } from "react";
+import { useState } from "react";
 import Utils from "./equipmentInventory_utils";
 // import { useNavigate } from "react-router-dom";
+import Hooks from "../../../Hook/hooks";
 import TableMap from "../../../Reusable/component/tableMap";
 
 function EquipmentInventoryList(){
@@ -8,13 +9,16 @@ function EquipmentInventoryList(){
        cementUnit03Inventory,
      } = Utils();
     // const navigate = useNavigate();
+    const {pagination} = Hooks()
+    const[currentPage, setCurrentPage]=useState(1)
+    const itemsPerPage = 10
+    const { firstIndex, lastIndex, serialNumberFactor,totalItems, numberOfPages} = pagination(cementUnit03Inventory,itemsPerPage, currentPage )
+
 
     const display=(item,i)=>{   
       return(
         <>
-           <td>{i+1}</td>
-           {/* <td>{item.department}</td> */}
-           {/* <td>{item.equipment}</td>         */}
+           <td>{i+serialNumberFactor}</td>
            <td>{item.ironType}</td>
            <td>{item.ironTag}</td>
            <td>{item.location}</td>
@@ -33,7 +37,6 @@ function renderTitle(){
 }
 
 
-
     return(
         <div 
           style={{
@@ -44,11 +47,16 @@ function renderTitle(){
             }}>
 
             <TableMap
-              data={cementUnit03Inventory}
+              data={cementUnit03Inventory.slice(firstIndex, lastIndex)}
               equipment={ renderTitle()}
               headers={["SN", "IRON", "TAG", "LOCATION",]}
               renderItems={(item,i)=> display(item,i)}
-              handleAddNew={()=>{}}
+              handleAddNew={()=>{setCurrentPage(numberOfPages)}}
+
+              totalItems={totalItems}
+              itemsPerPage={itemsPerPage}
+              onPageChange={(page)=> setCurrentPage(page)}
+              currentPage={currentPage}
             />
 
         </div>

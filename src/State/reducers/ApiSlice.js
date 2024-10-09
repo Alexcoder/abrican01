@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
+import * as Utils from "./tempUtils";
+
+const { equipmentListUtils } = Utils;
 
 const initialState = {
-    equipment: [],
+    equipment: [...equipmentListUtils],
     equipmentIronInventory: [], 
 }
 
@@ -12,10 +15,10 @@ const apiSlice = createSlice({
 
     reducers:{
      addEquipment : (state, action)=>{
-       state.equipment = state.equipment.push(action.payload);
+      state.equipment.push(action?.payload)
      },
      addEquipmentIronsInventory : (state, action)=>{
-         state.equipment = state.equipmentIronInventory.push(action.payload);
+         state.equipmentIronInventory.push(action?.payload);
      },
      equipmentList : (state, action)=>{
          state.equipment = action.payload;

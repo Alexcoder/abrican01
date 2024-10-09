@@ -4,11 +4,11 @@ import { useState } from "react";
 function Utils(){
 
     const initialStateEquipment={
-        name  : "",
         department     : "",
-        type   : "",
-        serialNumber       : "",
-        codeName     : "",
+        equipmentName  : "",
+        equipmentType   : "",
+        equipmentSerialNumber       : "",
+        equipmentCodeName     : "",
         location : "",  
       };  
     
@@ -23,17 +23,17 @@ function Utils(){
     
     const utilsCreateEquipment = [
       { placeholder: "Department", name: "department", value: equipmentData.department},
-        { placeholder: "Equipment Name", name: "name", value: equipmentData.name},
-        { placeholder: "Equipment Type", name: "type", value: equipmentData.type },
-        { placeholder: "Equipment Serial Number", name: "serialNumber", value: equipmentData.serialNumber},
-        { placeholder: "Equipment Code", name:"codeName", value: equipmentData.codeName},
+        { placeholder: "Equipment Name", name: "equipmentName", value: equipmentData.equipmentName},
+        { placeholder: "Equipment Type", name: "equipmentType", value: equipmentData.equipmentType },
+        { placeholder: "Equipment Serial Number", name: "equipmentSerialNumber", value: equipmentData.equipmentSerialNumber},
+        { placeholder: "Equipment Code", name:"equipmentCodeName", value: equipmentData.equipmentCodeName},
         { placeholder: "Equipment Location", name:"location", value: equipmentData.location},
     ];
 
     const equipmentListUtils =[
       {
         department: "Cementing",
-        equipment: "Cement Unit",
+        equipmentName: "Cement Unit",
         equipmentType: "JEREH",
         equipmentSerialNumber : "00300016",
         location:"Base",
@@ -41,14 +41,14 @@ function Utils(){
       },
       {
         department: "Cementing",
-        equipment: "Cement Unit",
+        equipmentName: "Cement Unit",
         equipmentType: "JEREH",
         equipmentSerialNumber : "00300013",
         location:"Base",
         equipmentCodeName:"cementUnit06",
       },
       {
-        equipment: "Cement Unit",
+        equipmentName: "Cement Unit",
         department: "Cementing",
         equipmentType: "SCHLUMBERGER",
         equipmentSerialNumber : "02",
@@ -57,7 +57,7 @@ function Utils(){
       },
       {
         department: "Cementing",
-        equipment: "Cement Unit",
+        equipmentName: "Cement Unit",
         equipmentType: "SCHLUMBERGER",
         equipmentSerialNumber : "04",
         location:"Base",
@@ -65,7 +65,7 @@ function Utils(){
       },
       {
         department: "Cementing",
-        equipment: "Cement Unit",
+        equipmentName: "Cement Unit",
         equipmentType: "SCHLUMBERGER",
         equipmentSerialNumber : "05",
         location:"Base",
@@ -73,7 +73,7 @@ function Utils(){
       },
       {
         department: "Cementing",
-        equipment: "120bbl BatchMixer",
+        equipmentName: "120bbl BatchMixer",
         equipmentType: "SCHLUMBERGER",
         equipmentSerialNumber : "01",
         location:"Base",
@@ -82,7 +82,7 @@ function Utils(){
     ]
 
     
-console.log(equipmentData)
+// console.log(equipmentData)
       return{
         handleEquipmentInputChange,
         utilsCreateEquipment,

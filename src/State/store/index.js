@@ -1,8 +1,10 @@
-import {legacy_createStore } from "redux";
-import {thunk} from 'redux-thunk';
-import { applyMiddleware } from "redux";
-import reducers from "../reducers";
+import {configureStore } from "@reduxjs/toolkit";
+import ApiSlice from "../reducers/ApiSlice"
 
 
-const store = legacy_createStore(reducers, applyMiddleware(thunk));
+const store = configureStore({
+    reducer:{
+        ApiSlice,
+    }
+});
 export default store;

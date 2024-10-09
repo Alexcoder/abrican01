@@ -1,6 +1,7 @@
-// import { useState } from "react";
+// import { useEffect } from "react";
 import { Route, Routes , useLocation} from 'react-router-dom';
 import * as MyComponents from "./Component_Abrican";
+// import MyApiActions from "./State/actions-creators/apiActions";
 import './App.css';
 
 function App() {
@@ -16,6 +17,12 @@ function App() {
     EquipmentInventory,
     CreatePersonnelProfile,
   } = MyComponents;
+
+  // const { fetchEquipment } = MyApiActions()
+
+  // useEffect(()=>{
+  //   fetchEquipment()
+  // },[])
 
   const location = useLocation();
 
