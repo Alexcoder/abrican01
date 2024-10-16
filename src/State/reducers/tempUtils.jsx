@@ -1,20 +1,20 @@
 
 export  const equipmentListUtils =[
+     {
+       department: "Cementing",
+       equipmentName: "Cement Unit",
+       equipmentType: "JEREH",
+       equipmentSerialNumber : "03220016",
+       location:"Base",
+       equipmentCodeName:"06",
+     },
     {
-      department: "Cementing",
-      equipmentName: "Cement Unit",
-      equipmentType: "JEREH",
-      equipmentSerialNumber : "00300016",
-      location:"Base",
-      equipmentCodeName:"cementUnit03",
-    },
-    {
-      department: "Cementing",
-      equipmentName: "Cement Unit",
-      equipmentType: "JEREH",
-      equipmentSerialNumber : "00300013",
-      location:"Base",
-      equipmentCodeName:"cementUnit06",
+       department: "Cementing",
+       equipmentName: "Cement Unit",
+       equipmentType: "JEREH",
+       equipmentSerialNumber : "00300016",
+       location:"Base",
+       equipmentCodeName:"cementUnit03",
     },
     {
       department: "Cementing",

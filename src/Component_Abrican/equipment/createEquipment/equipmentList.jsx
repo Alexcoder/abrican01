@@ -1,30 +1,24 @@
-import { useState,  } from "react";
-// useEffect
+// import { useEffect } from "react";
 import Utils from "./utilsEquipment";
-// import { useNavigate } from "react-router-dom";
 import TableMap from "../../../Reusable/component/tableMap";
 import MultipleInputField from "../../../Reusable/component/multipleInputField";
-import ApiActions from "../../../State/actions-creators/apiActions";
+import * as EquipmentSliceActions from "../../../State/reducers/equipment";
+import EquipmentApiActions from "../../../State/actions-creators/equipment";
 import { useDispatch, useSelector } from "react-redux";
 import Hooks from "../../../Hook/hooks";
 import "./styles.css";
 
 function EquipmentList(){
-  const dispatch = useDispatch();
-    const {equipment} = useSelector(state=> state.ApiSlice);
+    const dispatch = useDispatch();
+    const {pageSet, inputFieldSet} = EquipmentSliceActions;
+    const {equipment, currentPage, inputField, itemsPerPage} = useSelector(state=> state.equipment);
     const { utilsCreateEquipment, setEquipmentData, equipmentData } = Utils();
-    const { addNewEquipment,  } = ApiActions();
-    const {pagination} = Hooks()
-    // fetchEquipment
-    
-    const [openInput, setOpenInput] = useState(false)
-    const[currentPage, setCurrentPage]=useState(1)
-    const itemsPerPage = 5
+    const { addEquipment, deleteEquipment } = EquipmentApiActions();
+    const { pagination, } = Hooks();
+
+  
     const { firstIndex, lastIndex, serialNumberFactor,totalItems, numberOfPages} = pagination(equipment,itemsPerPage, currentPage )
 
-    // useEffect(()=>{
-    //   fetchEquipment(page)
-    // },[fetchEquipment, page])
 
     const display=(item,i)=>{       
       return(
@@ -34,40 +28,52 @@ function EquipmentList(){
                <td>{item["equipmentName"]}</td>
                <td>{item["equipmentType"]}</td>
                <td>{item["equipmentSerialNumber"]}</td>
-               <td>{item["equipmentCodeName"]}</td>
-               {/* <td>{item["location"]}</td> */}
+               <td >{item["equipmentCodeName"]}</td>
+               <td onClick={()=> dispatch(deleteEquipment(item._id))}>-</td>
       </>
     )
   };
   const handleChange=(e)=>{
     setEquipmentData((prev)=> ({...prev, [e.target.name] : e.target.value})) ;
   };
-  const handleSubmit=()=> {dispatch(addNewEquipment(equipmentData)); setCurrentPage(numberOfPages); setOpenInput(false)};
+
+  const handleSubmit=(e)=> {
+    e.preventDefault();
+    dispatch(addEquipment(equipmentData))
+    dispatch(inputFieldSet(false));
+    dispatch(pageSet(Number(numberOfPages)))
+  };
 
 
     return(
         <div 
         className="equipmentContainer">
+          { equipment?.length ?
             <TableMap
+            //Table Props
              data={equipment.slice(firstIndex, lastIndex)}
              equipment={"EQUIPMENT"} 
-             headers={["SN","DEPARTMENT", "EQUIPMENT", "TYPE","SERIAL NO", "CODE",]} 
+             headers={["SN","DEPARTMENT", "EQUIPMENT", "TYPE","SERIAL NO", "CODE", ""]} 
              renderItems={(item,i)=> display(item,i)}
-             handleAddNew={()=>setOpenInput(true)}
-
+             handleAddNew={()=> dispatch(inputFieldSet(true))}
+             
+             //Pagination Props
              totalItems={totalItems}
              itemsPerPage={itemsPerPage}
-             onPageChange={(page)=> setCurrentPage(page)}
+             onPageChange={(page)=> dispatch(pageSet(Number(page)))}
              currentPage={currentPage}
             />
+            : 
+            <div style={{diaplay:"flex", alignContent:"center"}}>Wait While Page Loads Equipment</div>
+          }
              <div>
              </div>
-           { openInput && 
+           { inputField && 
              <MultipleInputField
               data={utilsCreateEquipment} 
               onChange={handleChange} 
-              onClick={()=> handleSubmit()} 
-              handleClose={()=> setOpenInput(false)}
+              onSubmit={(e)=> handleSubmit(e)} 
+              handleClose={()=> dispatch(inputFieldSet(false))}
               buttonLabel={"Submit"} 
               title={"CREATE"} 
               disabled={false}

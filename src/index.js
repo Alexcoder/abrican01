@@ -10,7 +10,6 @@ import { ContextProvider } from './State/context/Context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
     <Provider store={store}>
      <Router>
       <ContextProvider >
@@ -18,7 +17,6 @@ root.render(
       </ContextProvider>
     </Router>
   </Provider>
-  </React.StrictMode>
 );
 
 

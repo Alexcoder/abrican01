@@ -12,7 +12,7 @@ const Pagination = ({ totalItems, itemsPerPage, currentPage, onPageChange }) => 
   const pages = [...Array(totalPages)].map((_, i) => i + 1);
 
   return (
-    <div className="pagination">
+    <div className={pages.length>1 ? "pagination" : "hide"}>
       {pages.map((page) => (
         <button
           key={page}

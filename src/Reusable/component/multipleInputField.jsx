@@ -1,7 +1,7 @@
 import React from 'react';
 import "../styles/multipleInputField.css";
 
-const MultipleInputField = ({data, onChange, onClick,handleClose, buttonLabel, title, disabled, }) => {
+const MultipleInputField = ({data, onChange, onSubmit,handleClose, buttonLabel, title, disabled, }) => {
 
     return(
         <div 
@@ -32,7 +32,7 @@ const MultipleInputField = ({data, onChange, onClick,handleClose, buttonLabel, t
         {true && 
         <div style={{marginTop:"10px"}}>
           <button
-             onClick={onClick}
+             onClick={onSubmit}
              style={{
                padding:"10px", 
                backgroundColor:"blue", 

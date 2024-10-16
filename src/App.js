@@ -1,7 +1,8 @@
-// import { useEffect } from "react";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Route, Routes , useLocation} from 'react-router-dom';
 import * as MyComponents from "./Component_Abrican";
-// import MyApiActions from "./State/actions-creators/apiActions";
+import EquipmentApiActions from "./State/actions-creators/equipment"
 import './App.css';
 
 function App() {
@@ -18,11 +19,12 @@ function App() {
     CreatePersonnelProfile,
   } = MyComponents;
 
-  // const { fetchEquipment } = MyApiActions()
+  const { fetchEquipment } = EquipmentApiActions();
+  const dispatch = useDispatch();
 
-  // useEffect(()=>{
-  //   fetchEquipment()
-  // },[])
+  useEffect(()=>{
+    dispatch( fetchEquipment() )
+  },[dispatch, fetchEquipment])
 
   const location = useLocation();
 
