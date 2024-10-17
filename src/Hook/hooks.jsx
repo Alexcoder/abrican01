@@ -3,7 +3,8 @@ import axios from "axios";
 
 function Hooks(){
     const api = axios.create({
-        baseURL : "http://localhost:8000",
+        // baseURL : "http://localhost:8000",
+        baseURL : "https://abrican-api.onrender.com"
     });
 
     //pagination
