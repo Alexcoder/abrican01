@@ -1,4 +1,4 @@
-import * as reducerActions from "../reducers/equipment";
+import * as reducerActions from "../reducers/inventory";
 import Hooks from "../../Hook/hooks";
 import { useDispatch } from "react-redux";
 
@@ -13,28 +13,28 @@ function Actions() {
     
     const { add, remove, update, } = reducerActions;
     
-    const addNewEquipment = (equipmentData) => {
+    const addNewInventory = (equipmentData) => {
         const res = postRequest("/api/equipment/add", equipmentData);
         dispatch(add(res?.data ? res?.data : equipmentData));
     };
-    const fetchEquipment = (id) => {
+    const fetchInventory = (id) => {
         const res =  getRequestWithQuery(`/api/equipmentIron?id=${id}`);
         dispatch(update(res?.data));
     };
-    const updateEquipment = (id) => {
+    const updateInventory = (id) => {
         const res =  updateRequest(`/api/equipmentIron?id=${id}`);
         dispatch(update({data: res, id}));
     };
-    const deleteEquipment = (idOfEquipment) =>{
-        deleteRequest(`/api/equipment/delete/${idOfEquipment}`);
-        dispatch(remove(idOfEquipment));
+    const deleteInventory = (idOfInventory) =>{
+        deleteRequest(`/api/equipment/delete/${idOfInventory}`);
+        dispatch(remove(idOfInventory));
      };
 
   return {
-    fetchEquipment,
-    addNewEquipment,
-    deleteEquipment,
-    updateEquipment,
+    fetchInventory,
+    addNewInventory,
+    deleteInventory,
+    updateInventory,
   };
 
 

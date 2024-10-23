@@ -5,12 +5,11 @@ function Utils(){
     
     // const navigate = useNavigate();
     const initialStateEquipmentInventory={
-        personnelName  : "",
         department     : "",
-        coverallSize   : "",
-        bootSize       : "",
-        dateJoined     : "",
-        employeeNumber : "",  
+        equipment  : "",
+        ironType   : "",
+        tag       : "",
+        location : "",  
       };  
     
     const[equipmentInventory , setEquipmentInventory] = useState(initialStateEquipmentInventory);
@@ -24,11 +23,10 @@ function Utils(){
     
     const utilsCreateEquipmentInventory = [
       { placeholder: "Department", name: "department", value: equipmentInventory.department},
-        { placeholder: "Equipment Name", name: "equipmentName", value: equipmentInventory.equipmentName},
-        { placeholder: "Coverall Size", name: "coverallSize", value: equipmentInventory.coverallSize },
-        { placeholder: "Boot Size", name: "bootSize", value: equipmentInventory.bootSize},
-        { placeholder: "Date Joined", name:"dateJoined", value: equipmentInventory.dateJoined},
-        { placeholder: "Equipment Number", name:"equipmentNumber", value: equipmentInventory.employeeNumber},
+        { placeholder: "Equipment", name: "equipment", value: equipmentInventory.equipment},
+        { placeholder: "Item", name: "item", value: equipmentInventory.item },
+        { placeholder: "Tag", name: "tag", value: equipmentInventory.tag},
+        { placeholder: "Location", name:"location", value: equipmentInventory.location},
     ];
 
     const equipmentInventoryListUtils =[
@@ -41,8 +39,8 @@ function Utils(){
         category: "in",
         location:"Base",
         code:"cementUnit03",
-        ironType : "10ft Chiksan",
-        ironTag: "CUT-03 1234",
+        item : "10ft Chiksan",
+        tag: "CUT-03 1234",
       },
       {
         department: "Cementing",
@@ -52,8 +50,8 @@ function Utils(){
         category: "in",
         location:"Base",
         code:"cementUnit03",
-        ironType : "10ft Chiksan",
-        ironTag: "CUT-03 123467",
+        item : "10ft Chiksan",
+        tag: "CUT-03 123467",
       },
       {
         department: "Cementing",
@@ -63,8 +61,8 @@ function Utils(){
         category: "in",
         location:"Base",
         code:"cementUnit03",
-        ironType : "10ft Chiksan",
-        ironTag: "CUT-03 1234675",
+        item : "10ft Chiksan",
+        tag: "CUT-03 1234675",
       },
       {
         department: "Cementing",
@@ -74,8 +72,8 @@ function Utils(){
         category: "out",
         location:"Base",
         code:"cementUnit06",
-        ironType : "10ft Chiksan",
-        ironTag: "CUT-06 2234675",
+        item : "10ft Chiksan",
+        tag: "CUT-06 2234675",
       },
       {
         department: "Cementing",
@@ -85,8 +83,8 @@ function Utils(){
         category: "out",
         location:"Base",
         code:"cementUnit03",
-        ironType : "2x2 inch plug valve",
-        ironTag: "CUT-06 2234675",
+        item : "2x2 inch plug valve",
+        tag: "CUT-06 2234675",
       },
       {
         department: "Cementing",
@@ -96,8 +94,8 @@ function Utils(){
         category: "in",
         location:"Base",
         code:"cementUnit02",
-        ironType : "2-way Swivel",
-        ironTag: "CUT-02 2234675",
+        item : "2-way Swivel",
+        tag: "CUT-02 2234675",
       },
       {
         department: "Cementing",
@@ -107,8 +105,8 @@ function Utils(){
         category: "out",
         location:"Base",
         code:"cementUnit04",
-        ironType : "2-way Swivel",
-        ironTag: "CUT-04 2234675",
+        item : "2-way Swivel",
+        tag: "CUT-04 2234675",
       },
       {
         department: "Cementing",
@@ -118,8 +116,8 @@ function Utils(){
         category: "out",
         location:"Base",
         code:"cementUnit05",
-        ironType : "10ft Chiksan",
-        ironTag: "CUT-05 2234675",
+        item : "10ft Chiksan",
+        tag: "CUT-05 2234675",
       },
       {
         department: "Cementing",
@@ -129,16 +127,16 @@ function Utils(){
         category: "in",
         location:"Base",
         code:"cementUnit01",
-        ironType : "2x2 Plug Valve",
-        ironTag: "CUT-01 2234675",
+        item : "2x2 Plug Valve",
+        tag: "CUT-01 2234675",
       },
     ];
     
     
-    const ironFilterHook=(equipmentArrayData, unitCodeName, ironDescription)=>{
+    const ironFilterHook=(equipmentArrayData, unitCodeName, itemDescription)=>{
      const filtered = equipmentArrayData.filter((item)=> 
          (item.code.includes(unitCodeName) 
-         && item.ironType.includes(ironDescription)));
+         && item.item.includes(itemDescription)));
 
          return filtered
     } ;
@@ -162,7 +160,7 @@ function Utils(){
       for (const item of equipmentInventoryListUtils){
         if(
             (item.code==="cementUnit03"
-            && item.ironType===("10ft Chiksan"))
+            && item.item===("10ft Chiksan"))
             ){
           newest.push(item)
         }
@@ -184,6 +182,8 @@ function Utils(){
         cementUnit03And10ftChiksan : cementUnit03And10ftChiksan(),
         cementUnit06And10ftChiksan,
         cementUnit03Inventory: cementUnit03Inventory(),
+        equipmentInventory,
+        setEquipmentInventory,
       }
 };
 

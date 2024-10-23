@@ -3,10 +3,10 @@ import StopCard from "./stopCard/stopCard";
 import PPERequest from "./ppeHome/ppeRequest";
 import SideBar from "./SideBar/sideBarAbrican";
 import Personnel from "./personnel/personnelList";
-import EquipmentHome from "./equipment/equipmentHome";
-import Equipment from "./equipment/createEquipment/equipmentList";
+import EquipmentHome from "./equipment/home";
+import Equipment from "./equipment/equipment";
+import EquipmentInventory from "./equipment/inventory";
 import CreatePersonnelProfile from "./personnel/createPersonnelProfile";
-import EquipmentInventory from "./equipment/createInventory/equipmentInventory_list";
 
 export {
     Home,

@@ -1,0 +1,7 @@
+.equipmentContainer{
+        display: grid;
+        position: relative;
+        justify-content: center;
+        background-color: darkgray;
+        min-height: 100vh;
+}

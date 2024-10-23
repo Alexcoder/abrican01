@@ -6,6 +6,13 @@ function Hooks(){
         // baseURL : "http://localhost:8000",
         baseURL : "https://abrican-api.onrender.com"
     });
+    //API REQUEST HOOKS
+    const getRequest=(route)=> api.get(route)
+    const getRequestWithQuery=(routeWithQuery)=>api.get(routeWithQuery)
+    const postRequest=(route, data)=> api.post(route, data )
+    const updateRequest=(routeWithParams)=> api.patch(routeWithParams) 
+    const deleteRequest=(routeWithParams)=> api.delete(routeWithParams) 
+    
 
     //pagination
     const pagination=(array,itemsPerPage, page)=>{
@@ -25,12 +32,6 @@ function Hooks(){
         const saveToLocalStorageReact=(key, value)=> localStorage.setItem( key, JSON.stringify(value));
         const getFromLocalStorageReact=(key)=> JSON.parse(localStorage.getItem(key));
 
-        //API REQUEST HOOKS
-        const getRequest=(route)=> api.get(route)
-        const getRequestWithQuery=(routeWithQuery)=>api.get(routeWithQuery)
-        const postRequest=(route, data)=> api.post(route, data )
-        const updateRequest=(routeWithParams)=> api.patch(routeWithParams) 
-        const deleteRequest=(routeWithParams)=> api.delete(routeWithParams) 
         
 
     return{

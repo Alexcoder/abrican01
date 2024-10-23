@@ -2,12 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 import * as Utils from "./tempUtils";
 
 
-const { equipmentListUtils } = Utils;
+const { equipmentInventoryListUtils } = Utils;
 
 const initialState = {
-    inventory: [...equipmentListUtils],
+    inventory: [...equipmentInventoryListUtils],
     currentPage: 1,
-    itemsPerPage: 3,
+    itemsPerPage: 8,
     inputField: false,
 };
 
